@@ -2,14 +2,14 @@
 Wrangler is a command-line tool for building with Cloudflare developer products.
 
 ## How to use
-Build the container
+Build this container once
 ```
 docker build -t wrangler .
 ```
 
-Mount the source folder and provide your Account ID and API token to deploy pages;
+Mount the site folder and provide your Account ID and API token to deploy pages;
 ```
-docker run -v ./site:/site -e CLOUDFLARE_ACCOUNT_ID=<account-id> -e CLOUDFLARE_API_TOKEN=<api-token> wrangler pages publish /site --project-name=<project-name>
+docker run -v ${pwd}/site:/site -e CLOUDFLARE_ACCOUNT_ID -e CLOUDFLARE_API_TOKEN wrangler pages deploy /site --project-name=<project_name>
 ```
 
 # Resources
