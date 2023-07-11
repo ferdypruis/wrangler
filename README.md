@@ -9,7 +9,7 @@ docker build -t wrangler .
 
 Mount the source folder and provide your Account ID and API token to deploy pages;
 ```
-docker run -v .:/pages -e CLOUDFLARE_ACCOUNT_ID=<account-id> -e CLOUDFLARE_API_TOKEN=<api-token> wrangler pages publish /pages --project-name=<project-name>
+docker run -v ./site:/site -e CLOUDFLARE_ACCOUNT_ID=<account-id> -e CLOUDFLARE_API_TOKEN=<api-token> wrangler pages publish /site --project-name=<project-name>
 ```
 
 # Resources
